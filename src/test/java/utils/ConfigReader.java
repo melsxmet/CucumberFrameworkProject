@@ -12,7 +12,7 @@ public class ConfigReader {
 
     public static String read(String key, String path){
         Properties properties= new Properties();
-        try(FileInputStream fis= new FileInputStream(path)){
+        try(FileInputStream fis= new FileInputStream(path)) {
             properties.load(fis);
         }catch(IOException ioException){
             ioException.printStackTrace();
